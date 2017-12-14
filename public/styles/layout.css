@@ -18,8 +18,109 @@ body {
   margin: 0;
   color: #244751;
   background-color: #eee;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+main {
+  width: 450px;
+  background-color: #FFF;
+  margin: 0 auto;
+  height: 100%;
+  padding-top: 140px;
+}
+
+article.tweet  {
+  transform: scale(1);
+  transition: all .3s ease-in-out;
+  margin: 1em 2em;
+  border: 1px solid #B2B2B2;
+  border-radius: 10px;
+}
+
+article.tweet:hover {
+  transform: scale(1.05);
+  border-color: #8e8e8e;
+}
+
+article.tweet header {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  background-color: #E5E5E5;
+  height: 90px;
+  padding: 10px;
+}
+
+article.tweet:hover header {
+  background-color: #d1cfcf;
+}
+
+article.tweet header img {
+  float:left;
+  height: 65px;
+  width: 65px;
+}
+
+article.tweet:hover img{
+  opacity: 0.8;
+}
+
+article.tweet header h3 {
+  float: left;
+  font-size: 25px;
+  margin-top: 5px;
+  margin-left: 10px;
+  color: #737B8C;
+}
+
+article.tweet header span {
+  float: right;
+  margin-top: 14px;
+  color: #8F96A3;
+}
+
+article.tweet:hover h3,
+article.tweet:hover span,
+article.tweet:hover p
+{
+  color: #1b3740;
+
+}
+
+article.tweet div {
+  height: 90px;
+  padding: 1.9em 1em;
+  text-align: left;
+  font-size: 1.1em;
+}
+
+article.tweet footer {
+  border-top: 1px solid #E5E5E5;
+  padding: 10px;
+  height: 40px;
+}
+
+article.tweet footer p {
+  margin-top: 3px;
+  display: inline-block;
+  font-size: .8em;
+}
+
+article.tweet footer ul {
+  margin-top: 3px;
+  float: right;
+  list-style: none;
+}
+
+article.tweet footer ul li {
+  float: left;
+  margin: 0 2px;
+  visibility: hidden;
+}
+
+article.tweet:hover footer ul li {
+  visibility: visible;
+}
