@@ -74,8 +74,5 @@ $(function() {
     })
   });
 
-  //setupCounter();
-  //renderTweets(data);
   loadTweets();
-
 });
