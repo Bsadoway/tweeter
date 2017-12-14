@@ -30,7 +30,7 @@ main {
   background-color: #FFF;
   margin: 0 auto;
   height: 100%;
-  padding-top: 140px;
+  padding-top: 105px;
 }
 
 article.tweet  {
@@ -71,6 +71,7 @@ article.tweet:hover img{
 article.tweet header h3 {
   float: left;
   font-size: 25px;
+  width: 183px;
   margin-top: 5px;
   margin-left: 10px;
   color: #737B8C;

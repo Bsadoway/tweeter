@@ -31,7 +31,7 @@ $(function() {
   $('#new-tweet-submit').on('submit', function(submitEvent) {
     submitEvent.preventDefault();
     const errorMessage = $(this).find('p');
-    const trimmedText = $(this).children('textarea').val();
+    const trimmedText = $(this).children('textarea').val().trim();
     const count = $('.counter');
 
     if (!trimmedText) {
