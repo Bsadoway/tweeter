@@ -95,6 +95,7 @@ article.tweet div {
   padding: 1.9em 1em;
   text-align: left;
   font-size: 1.1em;
+  overflow-wrap: break-word;
 }
 
 article.tweet footer {
