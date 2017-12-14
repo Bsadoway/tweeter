@@ -90,12 +90,10 @@ article.tweet:hover p
 
 }
 
-article.tweet div {
-  height: 90px;
-  padding: 1.9em 1em;
-  text-align: left;
-  font-size: 1.1em;
+article.tweet div p {
   overflow-wrap: break-word;
+  padding: 10px 15px;
+  font-size: 1.1em;
 }
 
 article.tweet footer {

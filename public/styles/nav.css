@@ -1,7 +1,6 @@
-
 #nav-bar {
   z-index: 9999;
-  position:fixed;
+  position: fixed;
   height: 80px;
   width: 100%;
   background-color: #00a087;
@@ -9,7 +8,7 @@
   padding: 0em 2em;
 }
 
-#nav-bar .logo{
+#nav-bar .logo {
   height: 80px;
   width: 80px;
   margin-right: 10px;
@@ -19,4 +18,19 @@
   font-size: 200%;
   position: fixed;
   margin-top: 20px;
+}
+
+#nav-bar button {
+  float: right;
+  margin: 10px;
+  padding: 0 25px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  height: 60px;
+  color: #00a087;
+  font-size: 1.3em;
+}
+
+#nav-bar button:hover {
+  color: #000;
 }
