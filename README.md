@@ -13,8 +13,8 @@ User is able to create new tweets that are sent to a mongoDb collection, the twe
 
 ## Screenshots
 
-!["Screenshot of tweet compose box"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/tweet-box.png)
-!["Screenshot of tweets"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/tweets.png)
+!["Screenshot of tweet compose box"](https://github.com/Bsadoway/tweeter/blob/master/docs/compose-tweet.png)
+!["Screenshot of tweets"](https://github.com/Bsadoway/tweeter/blob/master/docs/tweets.png)
 
 
 ## Dependencies
