@@ -16,17 +16,19 @@ $(function() {
     $tweet.append($('<footer>')
       .append($('<p>').text(moment(tweet.created_at).startOf('hour').fromNow()))
       .append($('<ul>')
-        .append(['flag', 'retweet', 'heart'].map(icon => `<li><i class="fa fa-${icon}" aria-hidden="true"></i></li>`))
+        .append($('<li>').append($('<i>').addClass('fa fa-flag').attr('aria', 'true')))
+        .append($('<li>').append($('<i>').addClass('fa fa-retweet').attr('aria', 'true')))
+        .append($('<li>').append($('<i>').addClass('fa fa-heart-o likes-button').attr('aria', 'true')))
       )
-
+      .append($('<div>').addClass('like-counter').text(`${tweet.likes} likes`))
     );
+    $tweet.data('id', tweet._id);
     return $tweet;
   }
 
   function renderTweets(tweets) {
     $('#tweets').empty().append(tweets.map(tweet => createTweetElement(tweet)));
   }
-
 
   $('#new-tweet-submit').on('submit', function(submitEvent) {
     submitEvent.preventDefault();
@@ -43,7 +45,6 @@ $(function() {
       return;
     }
 
-
     $.ajax({
       method: 'POST',
       url: '/tweets/',
@@ -56,7 +57,6 @@ $(function() {
     });
   });
 
-
   function loadTweets() {
     $.ajax({
       url: '/tweets',
@@ -68,11 +68,12 @@ $(function() {
     });
   }
 
-  $('#compose-button').on('click', function(){
-    $('.new-tweet').slideToggle("slow", function(){
+  $('#compose-button').on('click', function() {
+    $('.new-tweet').slideToggle("slow", function() {
       $('.new-tweet textarea').focus();
-    })
+    });
   });
 
   loadTweets();
+
 });

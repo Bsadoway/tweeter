@@ -88,7 +88,6 @@ article.tweet:hover span,
 article.tweet:hover p
 {
   color: #1b3740;
-
 }
 
 article.tweet div p {
@@ -109,8 +108,20 @@ article.tweet footer p {
   font-size: .8em;
 }
 
+article.tweet footer div{
+  float:right;
+  margin-top: 5px;
+  visibility: hidden;
+  font-size: .8em;
+}
+
+article.tweet:hover footer div {
+  visibility: visible;
+}
+
 article.tweet footer ul {
   margin-top: 3px;
+  padding-left: 10px;
   float: right;
   list-style: none;
 }
@@ -123,4 +134,8 @@ article.tweet footer ul li {
 
 article.tweet:hover footer ul li {
   visibility: visible;
+}
+
+.fa-heart {
+  color:red;
 }
