@@ -16,7 +16,7 @@ $(function() {
     $tweet.append($('<div>')
       .append($('<p>').text(tweet.content.text)));
     $tweet.append($('<footer>')
-      .append($('<p>').text(moment.unix(tweet.created_at/1000).fromNow()))
+      .append($('<p>').text(moment.unix(tweet.created_at / 1000).fromNow()))
       .append($('<ul>')
         .append($('<li>').append($('<i>').addClass('fa fa-flag').attr('aria', 'true')))
         .append($('<li>').append($('<i>').addClass('fa fa-retweet').attr('aria', 'true')))
@@ -35,8 +35,12 @@ $(function() {
 
   // validates the text for no input or exceeding the max characters
   function validateText(text, count) {
-    if (!text) { return false; }
-    if (count < 0) { return false; }
+    if (!text) {
+      return false;
+    }
+    if (count < 0) {
+      return false;
+    }
     return true;
   }
 
@@ -46,7 +50,7 @@ $(function() {
     const trimmedText = $(this).children('textarea').val().trim();
     let count = $('.counter').text();
 
-    if(!validateText(trimmedText, count)){
+    if (!validateText(trimmedText, count)) {
       errorMessage.text("Error, tweet must contain text and must not exceed 140 characters");
       return;
     }
