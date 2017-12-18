@@ -1,17 +1,13 @@
 $(function() {
 
   $('body').on('click', '.likes-button', function(clickEvent) {
-    let likes = $(this).closest('article').find('.like-counter');
+    const likes = $(this).closest('article').find('.like-counter');
     const tweetId = $(this).closest('article').data('id');
-    //immediately increment the display like #
     $(this).toggleClass('fa-heart-o fa-heart');
 
-    let value = 0;
-    if ($(this).hasClass('fa-heart')) {
-      value = parseInt(likes.text(), 10) + 1;
-    } else {
-      value = parseInt(likes.text(), 10) - 1;
-    }
+    //immediately increment the display like #
+    let value = parseInt(likes.text(), 10);
+    $(this).hasClass('fa-heart') ? value++ : value--;
 
     let likesText = value === 1 ? " like" : " likes";
     likes.text(value + likesText);
